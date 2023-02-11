@@ -3,7 +3,7 @@ function ElectricalAppliance(amp,volt) {
     this.volt = volt ,
     this.instrumentStatus = function (state, instrument) {
         if (state) {
-            console.log(`${instrument} included`)
+            console.log(`${instrument} included watt = ${this.amp * this.volt}`)
     } else {
             console.log(`${instrument} switched off`)
         }
@@ -19,8 +19,8 @@ function Lamp(height){
     this.lamp_height = height
 }
 
-Tv.prototype = new ElectricalAppliance()
-Lamp.prototype = new ElectricalAppliance()
+Tv.prototype = new ElectricalAppliance(3,220)
+Lamp.prototype = new ElectricalAppliance(1,220)
 
 
 
