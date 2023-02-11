@@ -2,8 +2,15 @@ const person = {
     city: "Moscow",
     name: "Andrey"
 }
-for (let key in Object.entries(person)){
-    if (person.hasOwnProperty(key)){
-        console.log(key)
+
+
+function getProp(obj){
+    for (let prop in obj){
+        if (obj.hasOwnProperty(prop)){
+            console.log(prop, obj[prop])
+        }
     }
+
 }
+
+getProp(person)

@@ -1,4 +1,4 @@
-function ElectricalAppliance(amp,volt) {
+function Device(amp,volt) {
     this.amp = amp ,
     this.volt = volt ,
     this.instrumentStatus = function (state, instrument) {
@@ -19,8 +19,8 @@ function Lamp(height){
     this.lamp_height = height
 }
 
-Tv.prototype = new ElectricalAppliance(3,220)
-Lamp.prototype = new ElectricalAppliance(1,220)
+Tv.prototype = new Device(3,220)
+Lamp.prototype = new Device(1,220)
 
 
 
